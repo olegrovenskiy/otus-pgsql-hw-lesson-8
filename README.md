@@ -345,3 +345,48 @@ ALTER TABLE student SET (autovacuum_enabled = off);
 Задание со *:
 Написать анонимную процедуру, в которой в цикле 10 раз обновятся все строчки в искомой таблице.
 Не забыть вывести номер шага цикла.
+
+
+        DO $$
+            BEGIN
+            for i in 1..10 loop
+                raise notice 'i:   %', i;
+                UPDATE student SET fio = 'name-' || i;
+            end loop;
+            END;
+        $$;
+
+        postgres=#
+        postgres=# DO $$
+        postgres$#     BEGIN
+        postgres$#     for i in 1..10 loop
+        postgres$#         raise notice 'i:   %', i;
+        postgres$#         UPDATE student SET fio = 'name-' || i;
+        postgres$#     end loop;
+        postgres$#     END;
+        postgres$# $$;
+        NOTICE:  i:   1
+        NOTICE:  i:   2
+        NOTICE:  i:   3
+        NOTICE:  i:   4
+        NOTICE:  i:   5
+        NOTICE:  i:   6
+        NOTICE:  i:   7
+        NOTICE:  i:   8
+        NOTICE:  i:   9
+        NOTICE:  i:   10
+        DO
+        postgres=# select * from student where id = 100;
+         id  |                                                 fio
+        -----+------------------------------------------------------------------------------------------------------
+         100 | name-10
+        (1 row)
+        
+        postgres=#
+        
+
+
+
+
+
+

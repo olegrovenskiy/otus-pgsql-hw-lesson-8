@@ -255,11 +255,11 @@ SELECT relname, n_live_tup, n_dead_tup, trunc(100*n_dead_tup/(n_live_tup+1))::fl
    
 13.    Посмотреть размер файла с таблицей
 
-        postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
-         pg_size_pretty
-        ----------------
-         674 MB
-        (1 row)
+            postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
+             pg_size_pretty
+            ----------------
+             674 MB
+            (1 row)
 
 размер файла не увеличился, как и говорили на вебинаре, после обновления размер вырос, вакуум удалил строки, но оставил размер,
 после нового обновления занимался данный объём

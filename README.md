@@ -276,35 +276,35 @@ ALTER TABLE student SET (autovacuum_enabled = off);
 
 15.    10 раз обновить все строчки и добавить к каждой строчке любой символ
 
-        UPDATE 1000000
-        postgres=# update student set fio = 'name002';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name003';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name004';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name005';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name006';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name007';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name008';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name009';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name010';
-        UPDATE 1000000
-        postgres=#
+            UPDATE 1000000
+            postgres=# update student set fio = 'name002';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name003';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name004';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name005';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name006';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name007';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name008';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name009';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name010';
+            UPDATE 1000000
+            postgres=#
 
 
 16.    Посмотреть размер файла с таблицей
 
-        postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
-         pg_size_pretty
-        ----------------
-         1482 MB
-        (1 row)
+            postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
+             pg_size_pretty
+            ----------------
+             1482 MB
+            (1 row)
 
 17.    Объясните полученный результат
 
@@ -320,25 +320,25 @@ ALTER TABLE student SET (autovacuum_enabled = off);
 
 18.    Не забудьте включить автовакуум)
 
-        ALTER TABLE
-        postgres=# SELECT relname, n_live_tup, n_dead_tup, trunc(100*n_dead_tup/(n_live_tup+1))::float "ratio%", last_autovacuum FROM pg_stat_user_TABLEs WHERE relname = 'student';
-         relname | n_live_tup | n_dead_tup | ratio% |       last_autovacuum
-        ---------+------------+------------+--------+------------------------------
-         student |    1411246 |    9998695 |    708 | 2023-12-30 10:28:09.00593-05
-        (1 row)
-        
-        
-        postgres=# SELECT relname, n_live_tup, n_dead_tup, trunc(100*n_dead_tup/(n_live_tup+1))::float "ratio%", last_autovacuum FROM pg_stat_user_TABLEs WHERE relname = 'student';
-         relname | n_live_tup | n_dead_tup | ratio% |        last_autovacuum
-        ---------+------------+------------+--------+-------------------------------
-         student |    1019325 |          0 |      0 | 2023-12-30 10:41:46.373623-05
-        (1 row)
-        
-        postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
-         pg_size_pretty
-        ----------------
-         1482 MB
-        (1 row)
+            ALTER TABLE
+            postgres=# SELECT relname, n_live_tup, n_dead_tup, trunc(100*n_dead_tup/(n_live_tup+1))::float "ratio%", last_autovacuum FROM pg_stat_user_TABLEs WHERE relname = 'student';
+             relname | n_live_tup | n_dead_tup | ratio% |       last_autovacuum
+            ---------+------------+------------+--------+------------------------------
+             student |    1411246 |    9998695 |    708 | 2023-12-30 10:28:09.00593-05
+            (1 row)
+            
+            
+            postgres=# SELECT relname, n_live_tup, n_dead_tup, trunc(100*n_dead_tup/(n_live_tup+1))::float "ratio%", last_autovacuum FROM pg_stat_user_TABLEs WHERE relname = 'student';
+             relname | n_live_tup | n_dead_tup | ratio% |        last_autovacuum
+            ---------+------------+------------+--------+-------------------------------
+             student |    1019325 |          0 |      0 | 2023-12-30 10:41:46.373623-05
+            (1 row)
+            
+            postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
+             pg_size_pretty
+            ----------------
+             1482 MB
+            (1 row)
 
 
 

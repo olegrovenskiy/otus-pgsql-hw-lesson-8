@@ -163,34 +163,34 @@ CREATE TABLE student(id serial, fio char(100))
 
 9.    Посмотреть размер файла с таблицей
 
-        postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
-         pg_size_pretty
-        ----------------
-         135 MB
-        (1 row)
-        
-        postgres=#
+            postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
+             pg_size_pretty
+            ----------------
+             135 MB
+            (1 row)
+            
+            postgres=#
 
 10.    5 раз обновить все строчки и добавить к каждой строчке любой символ
 
-        postgres=# update student set fio = 'name1';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name2';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name3';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name4';
-        UPDATE 1000000
-        postgres=# update student set fio = 'name5';
-        UPDATE 1000000
-        postgres=#
-
-
-        postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
-         pg_size_pretty
-        ----------------
-         674 MB
-        (1 row)
+            postgres=# update student set fio = 'name1';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name2';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name3';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name4';
+            UPDATE 1000000
+            postgres=# update student set fio = 'name5';
+            UPDATE 1000000
+            postgres=#
+    
+    
+            postgres=# SELECT pg_size_pretty(pg_TABLE_size('student'));
+             pg_size_pretty
+            ----------------
+             674 MB
+            (1 row)
 
 
 11.    Посмотреть количество мертвых строчек в таблице и когда последний раз приходил автовакуум

@@ -51,34 +51,34 @@
 
 4.    Запустить pgbench -c8 -P 6 -T 60 -U postgres postgres
 
-        bash-4.2$ pgbench -c8 -P 6 -T 60 -U postgres postgres
-        Password:
-        pgbench (15.5)
-        starting vacuum...end.
-        progress: 6.0 s, 1744.0 tps, lat 4.560 ms stddev 1.959, 0 failed
-        progress: 12.0 s, 1682.7 tps, lat 4.748 ms stddev 1.982, 0 failed
-        progress: 18.0 s, 1682.5 tps, lat 4.748 ms stddev 2.016, 0 failed
-        progress: 24.0 s, 1681.3 tps, lat 4.751 ms stddev 2.248, 0 failed
-        progress: 30.0 s, 1658.8 tps, lat 4.816 ms stddev 2.277, 0 failed
-        progress: 36.0 s, 1671.8 tps, lat 4.778 ms stddev 1.972, 0 failed
-        progress: 42.0 s, 1659.8 tps, lat 4.814 ms stddev 2.213, 0 failed
-        progress: 48.0 s, 1652.2 tps, lat 4.835 ms stddev 2.134, 0 failed
-        progress: 54.0 s, 1678.7 tps, lat 4.759 ms stddev 1.938, 0 failed
-        progress: 60.0 s, 1676.2 tps, lat 4.766 ms stddev 2.090, 0 failed
-        transaction type: <builtin: TPC-B (sort of)>
-        scaling factor: 1
-        query mode: simple
-        number of clients: 8
-        number of threads: 1
-        maximum number of tries: 1
-        duration: 60 s
-        number of transactions actually processed: 100736
-        number of failed transactions: 0 (0.000%)
-        latency average = 4.757 ms
-        latency stddev = 2.087 ms
-        initial connection time = 23.525 ms
-        tps = 1679.314678 (without initial connection time)
-        bash-4.2$
+            bash-4.2$ pgbench -c8 -P 6 -T 60 -U postgres postgres
+            Password:
+            pgbench (15.5)
+            starting vacuum...end.
+            progress: 6.0 s, 1744.0 tps, lat 4.560 ms stddev 1.959, 0 failed
+            progress: 12.0 s, 1682.7 tps, lat 4.748 ms stddev 1.982, 0 failed
+            progress: 18.0 s, 1682.5 tps, lat 4.748 ms stddev 2.016, 0 failed
+            progress: 24.0 s, 1681.3 tps, lat 4.751 ms stddev 2.248, 0 failed
+            progress: 30.0 s, 1658.8 tps, lat 4.816 ms stddev 2.277, 0 failed
+            progress: 36.0 s, 1671.8 tps, lat 4.778 ms stddev 1.972, 0 failed
+            progress: 42.0 s, 1659.8 tps, lat 4.814 ms stddev 2.213, 0 failed
+            progress: 48.0 s, 1652.2 tps, lat 4.835 ms stddev 2.134, 0 failed
+            progress: 54.0 s, 1678.7 tps, lat 4.759 ms stddev 1.938, 0 failed
+            progress: 60.0 s, 1676.2 tps, lat 4.766 ms stddev 2.090, 0 failed
+            transaction type: <builtin: TPC-B (sort of)>
+            scaling factor: 1
+            query mode: simple
+            number of clients: 8
+            number of threads: 1
+            maximum number of tries: 1
+            duration: 60 s
+            number of transactions actually processed: 100736
+            number of failed transactions: 0 (0.000%)
+            latency average = 4.757 ms
+            latency stddev = 2.087 ms
+            initial connection time = 23.525 ms
+            tps = 1679.314678 (without initial connection time)
+            bash-4.2$
 
 
 5.    Применить параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
@@ -102,34 +102,34 @@
 
 6.    Протестировать заново
 
-        bash-4.2$ pgbench -c8 -P 6 -T 60 -U postgres postgres
-        Password:
-        pgbench (15.5)
-        starting vacuum...end.
-        progress: 6.0 s, 1683.3 tps, lat 4.723 ms stddev 2.084, 0 failed
-        progress: 12.0 s, 1572.5 tps, lat 5.080 ms stddev 2.750, 0 failed
-        progress: 18.0 s, 1607.0 tps, lat 4.970 ms stddev 2.049, 0 failed
-        progress: 24.0 s, 1634.2 tps, lat 4.889 ms stddev 2.047, 0 failed
-        progress: 30.0 s, 1588.7 tps, lat 5.028 ms stddev 2.342, 0 failed
-        progress: 36.0 s, 1595.3 tps, lat 5.008 ms stddev 2.148, 0 failed
-        progress: 42.0 s, 1617.9 tps, lat 4.938 ms stddev 2.056, 0 failed
-        progress: 48.0 s, 1598.1 tps, lat 4.998 ms stddev 2.356, 0 failed
-        progress: 54.0 s, 1597.0 tps, lat 5.002 ms stddev 2.098, 0 failed
-        progress: 60.0 s, 1573.8 tps, lat 5.076 ms stddev 2.143, 0 failed
-        transaction type: <builtin: TPC-B (sort of)>
-        scaling factor: 1
-        query mode: simple
-        number of clients: 8
-        number of threads: 1
-        maximum number of tries: 1
-        duration: 60 s
-        number of transactions actually processed: 96415
-        number of failed transactions: 0 (0.000%)
-        latency average = 4.970 ms
-        latency stddev = 2.218 ms
-        initial connection time = 25.582 ms
-        tps = 1607.261907 (without initial connection time)
-        bash-4.2$
+            bash-4.2$ pgbench -c8 -P 6 -T 60 -U postgres postgres
+            Password:
+            pgbench (15.5)
+            starting vacuum...end.
+            progress: 6.0 s, 1683.3 tps, lat 4.723 ms stddev 2.084, 0 failed
+            progress: 12.0 s, 1572.5 tps, lat 5.080 ms stddev 2.750, 0 failed
+            progress: 18.0 s, 1607.0 tps, lat 4.970 ms stddev 2.049, 0 failed
+            progress: 24.0 s, 1634.2 tps, lat 4.889 ms stddev 2.047, 0 failed
+            progress: 30.0 s, 1588.7 tps, lat 5.028 ms stddev 2.342, 0 failed
+            progress: 36.0 s, 1595.3 tps, lat 5.008 ms stddev 2.148, 0 failed
+            progress: 42.0 s, 1617.9 tps, lat 4.938 ms stddev 2.056, 0 failed
+            progress: 48.0 s, 1598.1 tps, lat 4.998 ms stddev 2.356, 0 failed
+            progress: 54.0 s, 1597.0 tps, lat 5.002 ms stddev 2.098, 0 failed
+            progress: 60.0 s, 1573.8 tps, lat 5.076 ms stddev 2.143, 0 failed
+            transaction type: <builtin: TPC-B (sort of)>
+            scaling factor: 1
+            query mode: simple
+            number of clients: 8
+            number of threads: 1
+            maximum number of tries: 1
+            duration: 60 s
+            number of transactions actually processed: 96415
+            number of failed transactions: 0 (0.000%)
+            latency average = 4.970 ms
+            latency stddev = 2.218 ms
+            initial connection time = 25.582 ms
+            tps = 1607.261907 (without initial connection time)
+            bash-4.2$
 
 
 7.    Что изменилось и почему?

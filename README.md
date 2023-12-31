@@ -101,35 +101,35 @@
 
 
 6.    Протестировать заново
-
-        bash-4.2$ pgbench -c8 -P 6 -T 60 -U postgres postgres
-        Password:
-        pgbench (15.5)
-        starting vacuum...end.
-        progress: 6.0 s, 1708.5 tps, lat 4.653 ms stddev 1.888, 0 failed
-        progress: 12.0 s, 1681.7 tps, lat 4.751 ms stddev 2.003, 0 failed
-        progress: 18.0 s, 1672.3 tps, lat 4.778 ms stddev 1.999, 0 failed
-        progress: 24.0 s, 1686.8 tps, lat 4.735 ms stddev 2.017, 0 failed
-        progress: 30.0 s, 1689.7 tps, lat 4.729 ms stddev 2.113, 0 failed
-        progress: 36.0 s, 1692.1 tps, lat 4.721 ms stddev 1.928, 0 failed
-        progress: 42.0 s, 1683.0 tps, lat 4.747 ms stddev 1.954, 0 failed
-        progress: 48.0 s, 1695.0 tps, lat 4.713 ms stddev 1.916, 0 failed
-        progress: 54.0 s, 1675.5 tps, lat 4.768 ms stddev 2.015, 0 failed
-        progress: 60.0 s, 1684.0 tps, lat 4.744 ms stddev 2.094, 0 failed
-        transaction type: <builtin: TPC-B (sort of)>
-        scaling factor: 1
-        query mode: simple
-        number of clients: 8
-        number of threads: 1
-        maximum number of tries: 1
-        duration: 60 s
-        number of transactions actually processed: 101220
-        number of failed transactions: 0 (0.000%)
-        latency average = 4.734 ms
-        latency stddev = 1.995 ms
-        initial connection time = 25.816 ms
-        tps = 1687.355076 (without initial connection time)
-        bash-4.2$
+    
+            bash-4.2$ pgbench -c8 -P 6 -T 60 -U postgres postgres
+            Password:
+            pgbench (15.5)
+            starting vacuum...end.
+            progress: 6.0 s, 1708.5 tps, lat 4.653 ms stddev 1.888, 0 failed
+            progress: 12.0 s, 1681.7 tps, lat 4.751 ms stddev 2.003, 0 failed
+            progress: 18.0 s, 1672.3 tps, lat 4.778 ms stddev 1.999, 0 failed
+            progress: 24.0 s, 1686.8 tps, lat 4.735 ms stddev 2.017, 0 failed
+            progress: 30.0 s, 1689.7 tps, lat 4.729 ms stddev 2.113, 0 failed
+            progress: 36.0 s, 1692.1 tps, lat 4.721 ms stddev 1.928, 0 failed
+            progress: 42.0 s, 1683.0 tps, lat 4.747 ms stddev 1.954, 0 failed
+            progress: 48.0 s, 1695.0 tps, lat 4.713 ms stddev 1.916, 0 failed
+            progress: 54.0 s, 1675.5 tps, lat 4.768 ms stddev 2.015, 0 failed
+            progress: 60.0 s, 1684.0 tps, lat 4.744 ms stddev 2.094, 0 failed
+            transaction type: <builtin: TPC-B (sort of)>
+            scaling factor: 1
+            query mode: simple
+            number of clients: 8
+            number of threads: 1
+            maximum number of tries: 1
+            duration: 60 s
+            number of transactions actually processed: 101220
+            number of failed transactions: 0 (0.000%)
+            latency average = 4.734 ms
+            latency stddev = 1.995 ms
+            initial connection time = 25.816 ms
+            tps = 1687.355076 (without initial connection time)
+            bash-4.2$
 
 
 
